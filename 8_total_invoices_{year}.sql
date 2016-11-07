@@ -1,4 +1,4 @@
-SELECT COUNT(*)
-FROM Invoice 
-WHERE InvoiceDate LIKE "2009%"
-OR InvoiceDate LIKE "2011%"
+SELECT COUNT(InvoiceId) AS "Number of Invoices"
+FROM Invoice
+WHERE STRFTIME('%Y',Invoice.InvoiceDate) = "2009"
+OR STRFTIME('%Y',Invoice.InvoiceDate) = "2011"
