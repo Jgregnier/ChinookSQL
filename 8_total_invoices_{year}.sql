@@ -1,4 +1,4 @@
 SELECT COUNT(*)
 FROM Invoice 
-WHERE InvoiceDate >= "2009-01-01" AND InvoiceDate <= "2009-12-31"
-OR InvoiceDate >= "2011-01-01" AND InvoiceDate <= "2011-12-31"
+WHERE InvoiceDate LIKE "2009%"
+OR InvoiceDate LIKE "2011%"
